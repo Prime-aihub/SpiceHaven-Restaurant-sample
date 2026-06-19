@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spice Haven Restaurant</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================================= -->
+<!-- NAVBAR -->
+<!-- ================================= -->
+
+<header>
+
+<div class="logo">
+
+<i class="fas fa-fire"></i>
+
+<span>SPICE HAVEN</span>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#veg">Veg Menu</a></li>
+<li><a href="#nonveg">Non-Veg Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#reservation">Reservation</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="nav-buttons">
+
+<div class="cart-icon" onclick="openCart()">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cart-count">0</span>
+
+</div>
+
+<a href="tel:9004130508" class="call-btn">
+
+Call Now
+
+</a>
+
+<a href="#reservation" class="book-btn">
+
+Book Table
+
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ================================= -->
+<!-- HERO SECTION -->
+<!-- ================================= -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h4>
+
+AUTHENTIC INDIAN RESTAURANT
+
+</h4>
+
+<h1>
+
+Taste The
+
+<span>Royal Flavours</span>
+
+</h1>
+
+<p>
+
+Experience authentic recipes,
+luxury ambience,
+and unforgettable dining moments.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#menu" class="order-btn">
+
+Explore Menu
+
+</a>
+
+<a href="https://wa.me/919004130508"
+target="_blank"
+class="whatsapp-btn">
+
+Order On WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="video-wrapper">
+
+<div class="video-card">
+
+<div class="label green">
+
+🟢 PURE VEG
+
+</div>
+
+<video autoplay muted loop playsinline>
+
+<source src="videos/veg-food.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+
+<div class="video-card">
+
+<div class="label red">
+
+🔴 NON VEG
+
+</div>
+
+<video autoplay muted loop playsinline>
+
+<source src="videos/nonveg-food.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- STATS -->
+<!-- ================================= -->
+
+<section class="stats">
+
+<div class="stat-box">
+
+<h2>25K+</h2>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>150+</h2>
+
+<p>Menu Items</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>12+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>4.9★</h2>
+
+<p>Google Rating</p>
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- AI FOOD ASSISTANT -->
+<!-- ================================= -->
+
+<section class="ai-section">
+
+<div class="section-title">
+
+<h2>
+
+AI Food Assistant
+
+</h2>
+
+<p>
+
+Ask anything about dishes
+
+</p>
+
+</div>
+
+<div class="ai-search">
+
+<input
+id="food-search"
+type="text"
+placeholder="Paneer, Biryani, Chinese, Under ₹300">
+
+<button onclick="searchFood()">
+
+<i class="fas fa-robot"></i>
+
+Ask AI
+
+</button>
+
+</div>
+
+<div id="ai-results"></div>
+
+<div id="recommendations"></div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- MENU CATEGORY -->
+<!-- ================================= -->
+
+<section id="menu" class="menu-category">
+
+<div class="section-title">
+
+<h2>
+
+Explore Menu
+
+</h2>
+
+<p>
+
+Choose your favourite category
+
+</p>
+
+</div>
+
+<div class="category-grid">
+
+<div class="category-card">
+
+<img src="icons/starters.png">
+
+<h3>Starters</h3>
+
+</div>
+
+<div class="category-card">
+
+<img src="icons/main-course.png">
+
+<h3>Main Course</h3>
+
+</div>
+
+<div class="category-card">
+
+<img src="icons/chinese.png">
+
+<h3>Chinese</h3>
+
+</div>
+
+<div class="category-card">
+
+<img src="icons/biryani.png">
+
+<h3>Biryani</h3>
+
+</div>
+
+<div class="category-card">
+
+<img src="icons/dessert.png">
+
+<h3>Desserts</h3>
+
+</div>
+
+<div class="category-card">
+
+<img src="icons/drinks.png">
+
+<h3>Beverages</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+<<!-- ================================= -->
+
+<!-- POPULAR DISHES -->
+
+<!-- ================================= -->
+
+<section class="popular-dishes">
+
+<div class="section-title">
+
+<h2>
+Popular Dishes
+</h2>
+
+<p>
+Chef's Best Recommendations
+</p>
+
+</div>
+
+<div class="dish-grid">
+
+<!-- Butter Chicken -->
+
+<div class="dish-card">
+
+<img src="images/butter-chicken.jpg">
+
+<div class="dish-info">
+
+<h3>Butter Chicken</h3>
+
+<p>
+Creamy tomato gravy
+</p>
+
+<div class="order-section">
+
+<span>₹349</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Butter Chicken',349);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Butter Chicken',349,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Paneer Tikka -->
+
+<div class="dish-card">
+
+<img src="images/paneer-tikka.jpg">
+
+<div class="dish-info">
+
+<h3>Paneer Tikka</h3>
+
+<p>
+Charcoal grilled paneer
+</p>
+
+<div class="order-section">
+
+<span>₹260</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Paneer Tikka',260);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Paneer Tikka',260,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Chicken Biryani -->
+
+<div class="dish-card">
+
+<img src="images/chicken-biryani.jpg">
+
+<div class="dish-info">
+
+<h3>Chicken Biryani</h3>
+
+<p>
+Authentic dum biryani
+</p>
+
+<div class="order-section">
+
+<span>₹299</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Chicken Biryani',299);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Chicken Biryani',299,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Veg Manchurian -->
+
+<div class="dish-card">
+
+<img src="images/veg-manchurian.jpg">
+
+<div class="dish-info">
+
+<h3>Veg Manchurian</h3>
+
+<p>
+Chef Special Chinese
+</p>
+
+<div class="order-section">
+
+<span>₹220</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Veg Manchurian',220);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Veg Manchurian',220,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+
+<!-- PURE VEG SPECIALITIES -->
+
+<!-- ================================= -->
+
+<section id="veg" class="veg-showcase">
+
+<div class="section-header">
+
+<div class="section-icon">
+<img src="icons/veg-icon.png">
+</div>
+
+<div>
+<h2 class="green-glow">
+PURE VEG SPECIALITIES
+</h2>
+
+<p>
+Authentic Indian & Veg Chinese Delicacies
+</p>
+</div>
+
+</div>
+
+<div class="dish-grid">
+
+<!-- Paneer Butter Masala -->
+
+<div class="dish-card">
+<img src="images/paneer-butter-masala.jpg">
+
+<div class="dish-info">
+
+<h3>Paneer Butter Masala</h3>
+
+<p>Rich tomato gravy</p>
+
+<div class="order-section">
+
+<span>₹260</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Paneer Butter Masala',260);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Paneer Butter Masala',260,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Kadai Paneer -->
+
+<div class="dish-card">
+<img src="images/kadai-paneer.jpg">
+
+<div class="dish-info">
+
+<h3>Kadai Paneer</h3>
+
+<p>Traditional kadai masala</p>
+
+<div class="order-section">
+
+<span>₹270</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Kadai Paneer',270);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Kadai Paneer',270,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Palak Paneer -->
+
+<div class="dish-card">
+<img src="images/palak-paneer.jpg">
+
+<div class="dish-info">
+
+<h3>Palak Paneer</h3>
+
+<p>Fresh spinach gravy</p>
+
+<div class="order-section">
+
+<span>₹250</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Palak Paneer',250);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Palak Paneer',250,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Veg Biryani -->
+
+<div class="dish-card">
+<img src="images/veg-biryani.jpg">
+
+<div class="dish-info">
+
+<h3>Veg Biryani</h3>
+
+<p>Dum cooked rice</p>
+
+<div class="order-section">
+
+<span>₹240</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Veg Biryani',240);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Veg Biryani',240,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Chilli Paneer -->
+
+<div class="dish-card">
+<img src="images/chilli-paneer.jpg">
+
+<div class="dish-info">
+
+<h3>Chilli Paneer</h3>
+
+<p>Indo Chinese Special</p>
+
+<div class="order-section">
+
+<span>₹250</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Chilli Paneer',250);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Chilli Paneer',250,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Veg Manchurian -->
+
+<div class="dish-card">
+<img src="images/veg-manchurian.jpg">
+
+<div class="dish-info">
+
+<h3>Veg Manchurian</h3>
+
+<p>Chef Special Chinese</p>
+
+<div class="order-section">
+
+<span>₹220</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Veg Manchurian',220);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Veg Manchurian',220,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<a href="#reservation" class="menu-page-btn">
+Order Your Favourite Dish
+</a>
+
+</section>
+
+<!-- ================================= -->
+
+<!-- NON VEG SPECIALITIES -->
+
+<!-- ================================= -->
+
+<section id="nonveg" class="nonveg-showcase">
+
+<div class="section-header">
+
+<div class="section-icon">
+<img src="icons/nonveg-icon.png">
+</div>
+
+<div>
+
+<h2 class="red-glow">
+NON VEG SPECIALITIES
+</h2>
+
+<p>
+Chicken, Mutton, Seafood & Chinese
+</p>
+
+</div>
+
+</div>
+
+<div class="dish-grid">
+
+<!-- Butter Chicken -->
+
+<div class="dish-card">
+<img src="images/butter-chicken.jpg">
+
+<div class="dish-info">
+
+<h3>Butter Chicken</h3>
+
+<p>Restaurant Bestseller</p>
+
+<div class="order-section">
+
+<span>₹349</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Butter Chicken',349);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Butter Chicken',349,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Chicken Tikka -->
+
+<div class="dish-card">
+<img src="images/chicken-tikka.jpg">
+
+<div class="dish-info">
+
+<h3>Chicken Tikka</h3>
+
+<p>Charcoal Grilled Speciality</p>
+
+<div class="order-section">
+
+<span>₹320</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Chicken Tikka',320);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Chicken Tikka',320,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Chicken Biryani -->
+
+<div class="dish-card">
+<img src="images/chicken-biryani.jpg">
+
+<div class="dish-info">
+
+<h3>Chicken Biryani</h3>
+
+<p>Authentic Dum Biryani</p>
+
+<div class="order-section">
+
+<span>₹299</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Chicken Biryani',299);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Chicken Biryani',299,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Mutton Rogan Josh -->
+
+<div class="dish-card">
+<img src="images/mutton-rogan-josh.jpg">
+
+<div class="dish-info">
+
+<h3>Mutton Rogan Josh</h3>
+
+<p>Kashmiri Speciality</p>
+
+<div class="order-section">
+
+<span>₹420</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Mutton Rogan Josh',420);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Mutton Rogan Josh',420,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Fish Fry -->
+
+<div class="dish-card">
+<img src="images/fish-fry.jpg">
+
+<div class="dish-info">
+
+<h3>Fish Fry</h3>
+
+<p>Fresh Seafood Special</p>
+
+<div class="order-section">
+
+<span>₹350</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Fish Fry',350);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Fish Fry',350,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+<!-- Chicken Manchurian -->
+
+<div class="dish-card">
+<img src="images/chicken-manchurian.jpg">
+
+<div class="dish-info">
+
+<h3>Chicken Manchurian</h3>
+
+<p>Chinese Favourite</p>
+
+<div class="order-section">
+
+<span>₹280</span>
+
+<select class="qty-select">
+<option value="1">Qty 1</option>
+<option value="2">Qty 2</option>
+<option value="3">Qty 3</option>
+<option value="4">Qty 4</option>
+<option value="5">Qty 5</option>
+<option value="10">Qty 10</option>
+<option value="15">Qty 15</option>
+<option value="20">Qty 20</option>
+<option value="25">Qty 25</option>
+<option value="30">Qty 30</option>
+<option value="35">Qty 35</option>
+<option value="40">Qty 40</option>
+<option value="45">Qty 45</option>
+<option value="50">Qty 50</option>
+</select>
+
+<button class="cart-btn"
+onclick="
+let qty=parseInt(this.parentElement.querySelector('select').value);
+for(let i=0;i<qty;i++){
+addToCart('Chicken Manchurian',280);
+}">
+Add To Cart </button>
+
+<button class="order-btn-small"
+onclick="orderDish('Chicken Manchurian',280,this.parentElement.querySelector('select').value)">
+Order Now </button>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<a href="#reservation" class="menu-page-btn">
+Order Your Favourite Dish
+</a>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- GALLERY -->
+<!-- ================================= -->
+
+<section id="gallery" class="gallery">
+
+<div class="section-title">
+
+<h2>Restaurant Gallery</h2>
+
+<p>Luxury Dining Experience</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="images/gallery1.jpg">
+<img src="images/gallery2.jpg">
+<img src="images/gallery3.jpg">
+<img src="images/gallery4.jpg">
+<img src="images/gallery5.jpg">
+<img src="images/gallery6.jpg">
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- TESTIMONIALS -->
+<!-- ================================= -->
+
+<section class="testimonials">
+
+<div class="section-title">
+
+<h2>Customer Reviews</h2>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+★★★★★
+<p>Best Butter Chicken in town.</p>
+<h4>Rahul Sharma</h4>
+</div>
+
+<div class="review-card">
+★★★★★
+<p>Excellent ambience and food.</p>
+<h4>Priya Mehta</h4>
+</div>
+
+<div class="review-card">
+★★★★★
+<p>Loved the AI food assistant.</p>
+<h4>Aditya Patil</h4>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- RESERVATION -->
+<!-- ================================= -->
+
+<section id="reservation" class="reservation">
+
+<div class="section-title">
+
+<h2>Reserve Your Table</h2>
+
+<p>Book your dining experience</p>
+
+</div>
+
+<div class="reservation-form">
+
+<div class="form-grid">
+
+<input id="res-name" type="text" placeholder="Your Name">
+
+<input id="res-phone" type="tel" placeholder="Phone Number">
+
+<input id="res-persons" type="number" placeholder="Persons">
+
+<input id="res-date" type="date">
+
+<input id="res-time" type="time">
+
+</div>
+
+<textarea placeholder="Special Request"></textarea>
+
+<button class="reserve-btn"
+onclick="sendReservation()">
+
+Reserve Table
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
+
+<footer id="contact">
+
+<div class="footer-grid">
+
+<div class="footer-column">
+
+<h3>SPICE HAVEN</h3>
+
+<p>
+Premium Dining Experience
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:9004130508">
+9004130508
+</a>
+
+</div>
+
+<div class="footer-column">
+
+<h3>Menu</h3>
+
+<a href="#veg">Veg Menu</a>
+<a href="#nonveg">Non-Veg Menu</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Spice Haven Restaurant
+
+</div>
+
+</footer>
+
+
+<div class="cart-drawer">
+
+<div class="cart-header">
+
+<h2>Your Order</h2>
+
+<button onclick="closeCart()">
+✕
+</button>
+
+</div>
+
+<div id="cart-items"></div>
+
+<div class="cart-footer">
+
+<h3>
+
+Total:
+<span id="cart-total">
+
+₹0
+
+</span>
+
+</h3>
+
+<button onclick="sendWhatsAppOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
