@@ -1417,9 +1417,17 @@ grid-template-columns:1fr;
 @media(max-width:576px){
 
 .category-grid{
-
 grid-template-columns:1fr;
+}
 
+.dish-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.order-section{
+flex-direction:column;
+align-items:stretch;
 }
 
 .hero-content h1{
